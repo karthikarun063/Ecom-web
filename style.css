@@ -1,0 +1,89 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  list-style: none;
+}
+nav {
+  background-color: #ffb5b5;
+  height: 80px;
+}
+
+.my_logo{
+  color: #613864;
+  font-size: 25px;
+  font-weight: bolder;
+  font-family: 'Pacifico', cursive;
+  line-height: 80px;
+  padding: 0px 100px;
+}
+
+body{
+  background-color: #ffffff;
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+nav ul {
+  float: right;
+  margin-right: 60px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #38598b;
+}
+
+nav ul li a:hover{
+  color: #5585b5;
+}
+#check{
+  display: none;
+}
+.checkbtn{
+  float: right;
+  color: #ffffff;
+  line-height: 80px;
+  margin-right: 40px;
+  font-size: 30px;
+  display: none;
+}
+
+
+@media (max-width:750px) {
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      background: rgba(255, 255, 255, 0.1);
+      width: 100%;
+      height: 100vh;
+      top: 60px;
+      text-align: center;
+      left: -100%;
+      transition: all 0.5s;
+    }
+
+    nav ul li {
+      display: block;
+    }
+
+    #check:checked~ul{
+      left: 0px;
+    }
+}
+
+.my_cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
