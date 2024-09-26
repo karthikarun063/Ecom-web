@@ -187,3 +187,38 @@ footer h3 {
 .input_deg {
   padding: 10px;
 }
+
+.my_form {
+  background: #f76b8a;
+  width: 60%;
+  margin: auto;
+  text-align: center;
+  margin-top: 200px;
+
+}
+
+.my_form h2 {
+  background-color: black;
+  color: #ffffff;
+  padding: 10px;
+}
+
+.input_deg label {
+  width: 100px;
+  display: inline-block;
+  font-size: 20px;
+}
+
+input[type='text'],[type='email'],[type='number'],[type='password']{
+  width: 40%;
+  padding: 12px;
+  resize: vertical;
+  box-sizing: border-box;
+}
+
+input[type='submit'] {
+  background-color: skyblue;
+  color: #455d7a;
+  padding: 10px;
+  border-radius: 10%;
+}
