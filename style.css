@@ -135,3 +135,7 @@ nav ul li a:hover{
   text-decoration: none;
   transition: 0.5s;
 }
+
+.card:hover{
+  box-shadow: 0 12px 20px 0 #ffb5b5;  
+}
