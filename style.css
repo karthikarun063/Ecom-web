@@ -87,3 +87,51 @@ nav ul li a:hover{
   height: 100%;
   object-fit: cover;
 }
+
+.p_title {
+  text-align: center;
+  font-size: 25px;
+  padding: 20px;
+}
+
+.card {
+  max-width: 330px;
+  text-align: center;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 1%;
+  margin: 25px;
+  padding: 25px;
+}
+
+.p_img {
+  width: 100%;
+}
+
+.my_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card h4 {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.card p {
+  padding: 15px;
+}
+
+.card a {
+  padding: 10px;
+  background-color: skyblue;
+  color: #455d7a;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+.card a:hover {
+  background-color: beige;
+  text-decoration: none;
+  transition: 0.5s;
+}
