@@ -1,4 +1,7 @@
 <?php
+    
+    session_start();
+
     $conn = mysqli_connect("localhost","root","root","php_ecom");
 
 
@@ -11,6 +14,22 @@
         $result = mysqli_query($conn,$sql);
 
         $row = mysqli_fetch_array($result);
+
+        if($row['usertype'] == "user"){
+            $_SESSION['$user_email'] = $u_email;
+            $_SESSION['$usertype'] = "user";
+            header("location:userpage.php");            
+        }
+
+        else if($row['usertype'] == "admin"){
+            $_SESSION['$user_email'] = $u_email;
+            $_SESSION['$usertype'] = "admin";
+            header("location:../admin/adminpage.php");            
+        }
+
+        else{
+            echo "Username or password is wrong";
+        }
     }
 ?>
 
