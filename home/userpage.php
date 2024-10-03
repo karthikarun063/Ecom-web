@@ -2,7 +2,11 @@
     session_start();
     if(!isset($_SESSION['user_email'])){    
         header("location:../home/login.php");
-}
+    }
+    else if($_SESSION['usertype'] == "admin"){
+        header("location:../home/login.php");
+    }
+
 ?>
 
 <!DOCTYPE html>

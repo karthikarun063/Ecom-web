@@ -3,6 +3,10 @@
     if(!isset($_SESSION['user_email'])){    
         header("location:../home/login.php");
 }
+    else if($_SESSION['usertype'] == "user"){
+    header("location:../home/login.php");
+}
+
 ?>
 
 

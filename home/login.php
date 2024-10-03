@@ -1,6 +1,7 @@
 <?php
     
     session_start();
+    error_reporting(0);
 
     $conn = mysqli_connect("localhost","root","root","php_ecom");
 
@@ -16,19 +17,19 @@
         $row = mysqli_fetch_array($result);
 
         if($row['usertype'] == "user"){
-            $_SESSION['$user_email'] = $u_email;
-            $_SESSION['$usertype'] = "user";
+            $_SESSION['user_email'] = $u_email;
+            $_SESSION['usertype'] = "user";
             header("location:userpage.php");            
         }
 
         else if($row['usertype'] == "admin"){
-            $_SESSION['$user_email'] = $u_email;
-            $_SESSION['$usertype'] = "admin";
+            $_SESSION['user_email'] = $u_email;
+            $_SESSION['usertype'] = "admin";
             header("location:../admin/adminpage.php");            
         }
 
         else{
-            echo "Username or password is wrong";
+            $_SESSION['message'] ="Username or password is wrong";
         }
     }
 ?>
@@ -45,6 +46,12 @@
 </head>
 <body>
     <div class="my_form">
+        <h2>
+            <?php
+                echo $_SESSION['message'];
+
+            ?>
+        </h2>
         <h2>Login form:</h2>
         <form action="" method="POST">
             <div class="input_deg">
