@@ -16,9 +16,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Koodai: Admin</title>
+    <link rel="stylesheet" href="../admin/admin_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>This is an admin page</h1>
-    <a href="../logout.php">Logout</a>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Ecom Admin</h2>
+            <ul>
+                <li><a href="">Dashboard</a></li>
+                <li><a href="">Users</a></li>
+                <li><a href="../admin/add_product.php">Add Products</a></li>
+                <li><a href="">View Products</a></li>
+            </ul>
+        </div>
+        <div class="header">
+            <div class="admin_header">
+                <a href="../logout.php">Logout</a>
+            </div>
+            <div class="info">
+                <p>random text I will update soon..</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
