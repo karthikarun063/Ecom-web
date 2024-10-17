@@ -64,6 +64,11 @@
     padding: 10px;
 }
 
+.info h1 {
+    text-align: center;
+    padding: 1em;
+}
+
 .my_form {
     margin-left: 30%;
 }
@@ -71,5 +76,21 @@
 label
 {
     display: inline-block;
-    width: 200px;
+    width: 150px;
+}
+
+.div_deg{
+    padding: 1em;
+}
+
+input[type = 'text'],[type = 'number']{
+    width: 30%;
+    padding: 1em;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+textarea{
+    width: 40%;
+    height: 100px;
 }

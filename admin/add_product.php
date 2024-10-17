@@ -27,7 +27,7 @@
             <h2>Ecom Admin</h2>
             <ul>
                 <li><a href="">Dashboard</a></li>
-                <li><a href="">Users</a></li>
+                <li><a href="../admin/adminpage.php">Users</a></li>
                 <li><a href="../admin/add_product.php">Add Products</a></li>
                 <li><a href="">View Products</a></li>
             </ul>
