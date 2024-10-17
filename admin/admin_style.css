@@ -67,3 +67,9 @@
 .my_form {
     margin-left: 30%;
 }
+
+label
+{
+    display: inline-block;
+    width: 200px;
+}
