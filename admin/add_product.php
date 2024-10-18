@@ -52,10 +52,10 @@ if(isset($_POST['add_product'])){
         <div class="sidebar">
             <h2>Ecom Admin</h2>
             <ul>
-                <li><a href="">Dashboard</a></li>
-                <li><a href="../admin/adminpage.php">Users</a></li>
-                <li><a href="../admin/add_product.php">Add Products</a></li>
-                <li><a href="">View Products</a></li>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Users</a></li>
+                <li><a href="add_product.php">Add Products</a></li>
+                <li><a href="display_product.php">View Products</a></li>
             </ul>
         </div>
         <div class="header">
