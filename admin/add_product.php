@@ -7,6 +7,32 @@
     header("location:../home/login.php");
 }
 
+
+$conn = mysqli_connect("localhost","root","root","php_ecom");
+
+if(isset($_POST['add_product'])){
+    $title = $_POST['title'];
+    $des = $_POST['description'];
+    $price = $_POST['price'];
+    $quantity = $_POST['qty'];
+    $image_name = $_FILES['my_image']['name'];
+
+    $tmp = explode(".", $image_name);
+    $newfilename = round(microtime(true)).'.'.end($tmp);
+    $uploadpath = "../product_image".$newfilename;
+
+    move_uploaded_file($_FILES['my_image']['tmp_name'],$uploadpath);
+
+    $sql = "INSERT INTO products (tittle, discription, price, quantity, image) 
+    VALUES ('$title', '$des', '$price', '$qty', '$newfilename')";
+
+
+    $data = mysqli_query($conn,$sql);
+
+    if($data){
+        header('location:add_product.php');
+    }
+}
 ?>
 
 
@@ -39,7 +65,7 @@
             <div class="info">
                 <h1>Add Products</h1>
                 <div class="my_form">
-                    <form>
+                    <form action="" method="POST" enctype="multipart/form-data">
                         <div class="div_deg">
                             <label>Title</label>
                             <input type="text" name="title">
@@ -55,6 +81,10 @@
                         <div class="div_deg">
                             <label>Quantity</label>
                             <input type="number" name="qty">
+                        </div>
+                        <div class="div_deg">
+                            <label>Add Image</label>
+                            <input type="file" name="my_image">
                         </div>
                         <div class="div_deg">
                             <input type="submit" name="add_product" value="Add Product">
